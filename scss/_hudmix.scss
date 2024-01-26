@@ -1,0 +1,181 @@
+div.container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 5rem;
+}
+@mixin header {
+  width: $w-full;
+  height: 20%;
+  padding: 2rem;
+  display: $flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  div.logo {
+    width: 30%;
+    display: $flex;
+    flex-direction: row;
+    align-items: center;
+
+    i {
+      color: $pink;
+      font-size: 60px;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: 900;
+    }
+  }
+}
+@mixin try {
+  width: 15%;
+  height: 20%;
+  padding: 0.5rem;
+  border: 2px solid $pink;
+  border-radius: 19px;
+  color: $pink;
+  display: $flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -1px -1px 3px$pink;
+}
+@mixin sectionone {
+  width: 100%;
+  height: auto;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  //   padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 60px;
+    // margin-bottom: 5%;
+  }
+  p {
+    width: 70%;
+    height: 30%;
+    font-size: 35px;
+    padding: 1.5rem;
+    text-align: center;
+    // background-color: aqua;
+  }
+  div.get {
+    margin-top: 3%;
+    background-color: $pink;
+    color: white;
+    width: 35%;
+    height: 7vh;
+  }
+  div.img {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+
+    div.imgone {
+      width: 80%;
+      height: 70vh;
+      border-radius: 20px;
+      position: absolute;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    div.imgtwo {
+      width: 40%;
+      height: 70vh;
+      position: absolute;
+      left: 60%;
+      top: 20%;
+      border-radius: 20px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  div.sent {
+    width: 100%;
+    height: 50vh;
+    margin-top: 5%;
+    padding-top: 2rem;
+    display: $flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    div.left {
+      width: 45%;
+
+      i {
+        font-size: 40px;
+        color: $pink;
+      }
+      p {
+        margin-left: -25px;
+      }
+    }
+    div.right {
+      width: 40%;
+
+      i {
+        font-size: 40px;
+        color: $pink;
+      }
+    }
+    p {
+      font-size: 25px;
+    }
+    h1 {
+      letter-spacing: 5px;
+      font-size: 70px;
+    }
+  }
+}
+@mixin sectiontwo {
+  width: 100%;
+  height: 100%;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  // background-color: aquamarine;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  div.grow {
+    width: 100%;
+    height: 80vh;
+    // background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50px;
+    z-index: 1;
+    color: white;
+  }
+  div.other {
+    width: 100%;
+    height: 80vh;
+    // background-color: aqua;
+  }
+}
